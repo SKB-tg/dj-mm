@@ -20,35 +20,35 @@ app.use(express.static(join(__dirname, '../client/dist')));
 app.use(express.json());
 
 // Эндпоинт: получить все треки
-app.get('/api/tracks', async (req, res) => {
-  try {
-    const result = await pool.query(`
-      SELECT id, title, artist, album, year, url, playlist_name
-      FROM tracks
-      ORDER BY playlist_name, title
-    `);
-    // Группируем по плейлистам
-    const playlists = {};
-    result.rows.forEach(row => {
-      if (!playlists[row.playlist_name]) {
-        playlists[row.playlist_name] = [];
-      }
-      playlists[row.playlist_name].push({
-        id: row.id,
-        title: row.title,
-        artist: row.artist,
-        album: row.album,
-        year: row.year,
-        url: row.url,
-		duration: row.duration
-      });
-    });
-    res.json(playlists);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Ошибка базы данных' });
-  }
-});
+// app.get('/api/tracks', async (req, res) => {
+  // try {
+    // const result = await pool.query(`
+      // SELECT id, title, artist, album, year, url, playlist_name
+      // FROM tracks
+      // ORDER BY playlist_name, title
+    // `);
+    Группируем по плейлистам
+    // const playlists = {};
+    // result.rows.forEach(row => {
+      // if (!playlists[row.playlist_name]) {
+        // playlists[row.playlist_name] = [];
+      // }
+      // playlists[row.playlist_name].push({
+        // id: row.id,
+        // title: row.title,
+        // artist: row.artist,
+        // album: row.album,
+        // year: row.year,
+        // url: row.url,
+		// duration: row.duration
+      // });
+    // });
+    // res.json(playlists);
+  // } catch (err) {
+    // console.error(err);
+    // res.status(500).json({ error: 'Ошибка базы данных' });
+  // }
+// });
 
 
 // SPA fallback
