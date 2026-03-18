@@ -1,12 +1,12 @@
 FROM node:20 AS builder
 WORKDIR /app
-COPY client/ ./client/
+COPY client/ .
 RUN cd client && npm install && npm run build
 
 # Бэкенд
 FROM node:20
 WORKDIR /app
-COPY server/ ./server/
+#COPY server/ ./server/
 COPY --from=builder /app/client/dist ./client/dist
 RUN cd server && npm install --omit=dev
 
