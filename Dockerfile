@@ -1,6 +1,6 @@
 # FROM node:20 AS builder
 FROM node:20
-WORKDIR .
+WORKDIR /app
 COPY client/ ./client
 RUN cd client && npm install && npm run build && cd ..
 
