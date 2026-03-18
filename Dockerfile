@@ -1,7 +1,7 @@
 FROM node:20 AS builder
 WORKDIR /app
 COPY client/ .
-RUN cd client && npm install && npm run build
+RUN npm install && npm run build
 
 # Бэкенд
 FROM node:20
