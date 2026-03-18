@@ -2,14 +2,15 @@
 FROM node:20
 WORKDIR /app
 COPY client/ ./client
-RUN cd client && npm install && npm run build && cd ..
+RUN cd app/client && npm install && npm run build && cd .. && cd ..
 
 # Бэкенд
 # FROM node:20
 # WORKDIR .
-COPY server/ ./server
+COPY server/ /app/server
 #COPY --from=builder /client/dist ./client/dist
-RUN cd server $$ npm install #--omit=dev
+COPY index.js /app
+RUN cd app/ && npm install #--omit=dev
 
 EXPOSE 3000
 CMD ["node", "server/index.js"]
