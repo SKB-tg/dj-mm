@@ -2,7 +2,7 @@
 FROM node:20
 WORKDIR .
 COPY client/ ./client
-RUN cd client && npm install && npm run build
+RUN cd client && npm install && npm run build && cd ..
 
 # Бэкенд
 # FROM node:20
