@@ -1,11 +1,11 @@
 FROM node:20 AS builder
-WORKDIR /
+WORKDIR .
 COPY client/ ./client/
 RUN npm install && npm run build
 
 # Бэкенд
 FROM node:20
-WORKDIR /
+WORKDIR .
 COPY server/ ./server/
 #COPY --from=builder /client/dist ./client/dist
 RUN cd server $$ npm install --omit=dev
