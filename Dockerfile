@@ -7,7 +7,7 @@ RUN npm install && npm run build
 FROM node:20
 WORKDIR /app
 #COPY server/ ./server/
-COPY --from=builder /app/client/dist ./client/dist
+COPY --from=builder /app/dist ./client/dist
 RUN npm install --omit=dev
 
 EXPOSE 3000
