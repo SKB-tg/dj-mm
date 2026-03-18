@@ -1,6 +1,6 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
+var express = require('express')
+var cors = require('cors');
+var dotenv = require('dotenv')
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 dotenv.config();
