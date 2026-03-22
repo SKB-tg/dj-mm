@@ -138,7 +138,7 @@ function togglePlayPause() {console.log(props.stop1)
       } else return
     }
                 if (!props.stop1 && !props.stop3) { 
-                // if (currentTrack.value.id === 'Big_Time_Piter_Gabriel_1986') { nextTick('Big_Time_Piter_Gabriel_1986')}
+                if (currentTrack.value.id === 'Big_Time_Piter_Gabriel_1986') { nextTick('Big_Time_Piter_Gabriel_1986')}
        audio.src = currentTrack.value.url
        audio.play().catch(console.error)
        isPlaying.value = true
