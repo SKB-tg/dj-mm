@@ -150,7 +150,7 @@ function togglePlayPause() {console.log(props.isPlayingGl)
 
     audio.src = currentTrack.value.url
     audio.play().catch(console.error)
-    // if (currentTrack.value.id === 'Dep_Mode_vinil_A_41') { nextTick('Dep_Mode_vinil_A_41')}
+    if (currentTrack.value.id === 'Dep_Mode_vinil_A_41') { nextTick('Dep_Mode_vinil_A_41')}
 
       // 👇 Эмитим в родителя!
       //emit('playlist-change', true)
