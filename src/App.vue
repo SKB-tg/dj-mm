@@ -15,7 +15,7 @@
     <!-- <h2>Плейлист 1: POP UP </h2> -->
     <!-- <button @click="showModal = true">Показать сообщение</button> -->
 
-  <FloatingModal v-model="showModal" >
+  <FloatingModal v-model="showModal" class="float-modal">
  
   </FloatingModal>
 
