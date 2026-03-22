@@ -146,7 +146,7 @@ function togglePlayPause() {console.log(props.stop2)
       } else return
     } 
             if (!props.stop2 && !props.stop3) { console.log(currentTrack.value)
-            // if (currentTrack.value.id === 'S_Vals_Full') { nextTick('S_Vals_Full')}
+            if (currentTrack.value.id === 'S_Vals_Full') { nextTick('S_Vals_Full')}
        audio.src = currentTrack.value.url
 	   audio.crossOrigin = "anonymous"; 
        audio.play().catch(console.error)
