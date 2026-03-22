@@ -132,7 +132,7 @@ onUnmounted(() => {
 .modal-close {
   position: absolute;
   top: 10px;
-  right: 26%;
+  right: 27%;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.15);
   border: none;
