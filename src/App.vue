@@ -10,7 +10,7 @@
                     <div class="eye right" :style="{ opacity: eyey }"></div>
                 </div>
             </div>
-        <img @click="onlogoBoost" src="/favicon-16x15.png" style="position:absolute;right:-20px;top:20px" class="btn boost">
+        <img @click="onlogoBoost" src="/favicon.svg" style="position:absolute;right:-20px;top:20px" class="btn boost">
                 
     <!-- <h2>Плейлист 1: POP UP </h2> -->
     <!-- <button @click="showModal = true">Показать сообщение</button> -->
