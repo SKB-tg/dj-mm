@@ -114,8 +114,8 @@ Electron.value = [{"id": "Big_Time_Piter_Gabriel_1986", 'title': 'Big Time Piter
     {"id": "Zodiak_album_1981_A2_4tr", 'title': 'Zodiak album 1981 A2 4 track', 'artist': 'Zodiak', 'url': 'audio/Zodiak_album_1981_A2_4tr.mp3', "year": "1981",'duration': 1180},
 {"id": "Remix_the_hall_of_the_mountain_king_E_G", "url": "audio/Remix_the_hall_of_the_mountain_king_E_G.mp3", "title": "Remix 'the Hall of the Mountain King' E. G.", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau", "year": "2025", "duration": 509},
     {"id": "Adrenalin", "url": "audio/Adrenalin.mp3", "title": "Adrenalin", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2025", "duration": 175},
-    {"id": "Space dance 2 remix", "url": "audio/Space_dance_2.mp3", "title": "Space_dance_2_remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 562},
-    {"id": "Space_dance_3_remix", "url": "audio/Space_dance_3.mp3", "title": "Space dance 3 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
+    {"id": "Space_dance_2_remix", "url": "audio/Space_dance_2.mp3", "title": "Space dance 2 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 562},
+    {"id": "Space_dance_3remix", "url": "audio/Space_dance_3.mp3", "title": "Space dance 3 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
 {"id": "L_D_mix", 'title': 'Remix "Beliver"', 'artist': 'DJ MurrMyau', "year": "2025", "album": "Black & W   creator DJ MurrMyau", 'url': 'audio/I_D_mix.mp3', 'duration': 300 }]
 // Общее состояние для всех плееров
 const activeTrack1 = ref(null)
