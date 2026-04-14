@@ -88,7 +88,7 @@ onMounted(async() => {
   }
   })
 
-  audio.addEventListener('ended',(1) => {
+  audio.addEventListener('ended',() => {
    playNext(1)
         emit('stop-state',
      false,
