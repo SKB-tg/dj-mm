@@ -6,7 +6,7 @@
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2026",
     "happy": "Recording date 24.04.2026 - bithday Alena Phedorovna (Дата записи 24.04.2026 - в день рождения для Алены Федоровны)",
-    "duration": 331,
+    "duration": 331
   }, {
     "id": "Metelica",
     "url": "/audio/Metelica_v2.mp3",
@@ -25,7 +25,7 @@
     "year": "2025",
    "duration": 153
   },
-  {
+    {
     "id": "kolybel",
     "url": "/audio/kolybel.mp3",
     "title": "Kolibelnaya",
@@ -34,7 +34,7 @@
     "year": "2026",
     "duration": 381
   },
-      {
+    {
     "id": "you_brutal_leo_v21",
     "url": "/audio/you_brutal_leo_v21.mp3",
     "title": "You brutal leo",
