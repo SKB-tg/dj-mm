@@ -79,8 +79,8 @@ onMounted(async() => {
 
   const audio = audioRef.value
   if (!audio) return
-  // audio.src = currentTrack.value.url
-  // emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+  audio.src = currentTrack.value.url
+  emit('track-change', audioRef, currentTrack.value, idplaylist.value)
 
   // События аудио
   audio.addEventListener('timeupdate', () => {
