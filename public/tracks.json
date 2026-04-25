@@ -14,7 +14,7 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2026",
-    "happy": "Recording date 24.04.2026",
+    "happy": "",
     "duration": 198
   }, {
     "id": "S_Vals_Full",
@@ -23,7 +23,8 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2025",
-   "duration": 153
+   "duration": 153,
+    "happy": ""
   },
     {
     "id": "kolybel",
@@ -32,7 +33,8 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2026",
-    "duration": 381
+    "duration": 381,
+    "happy": ""
   },
     {
     "id": "you_brutal_leo_v21",
@@ -41,7 +43,8 @@
     "artist": "Неизвестно",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2026",
-   "duration": 744
+   "duration": 744,
+    "happy": ""
   },
   {
     "id": "Limbo",
@@ -50,7 +53,8 @@
     "artist": "Неизвестно",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2025",
-   "duration": 159
+   "duration": 159,
+    "happy": ""
   },
   {
     "id": "Meteorite_is_approaching",
@@ -59,7 +63,8 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2025",
-    "duration": 306
+    "duration": 306,
+    "happy": ""
   },
     {
     "id": "About",
@@ -68,8 +73,9 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2026",
-    "duration": 564
-  },	
+    "duration": 564,
+    "happy": ""
+},	
   {
     "id": "morning_trash",
     "url": "/audio/morning_trash.mp3",
@@ -77,8 +83,9 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2026",
-    "duration": 926
-  },
+    "duration": 926,
+    "happy": ""
+    },
       {
     "id": "Adrenalin",
     "url": "/audio/Adrenalin.mp3",
@@ -86,8 +93,9 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2025",
-   "duration": 235
-  },
+   "duration": 235,
+   "happy": ""
+   },
     {
     "id": "B&W-Best",
     "url": "/audio/B&W-Best.mp3",
@@ -95,17 +103,19 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2025",
-   "duration": 217
-  },
-      {
+   "duration": 217,
+   "happy": ""
+   },
+    {
     "id": "Remix_the_hall_of_the_mountain_king_E_G",
     "url": "/audio/Remix_the_hall_of_the_mountain_king_E_G.mp3",
     "title": "Remix 'the Hall of the Mountain King' E. G.",
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2025",
-   "duration": 406
-  },
+   "duration": 406,
+   "happy": ""
+   },
   {
     "id": "The_Legend",
     "url": "/audio/The_Legend.mp3",
@@ -113,7 +123,8 @@
     "artist": "DJ MurrMyau",
     "album": "Black & W   creator DJ MurrMyau",
     "year": "2025",
-    "duration": 300
+    "duration": 300,
+    "happy": ""
   },
   {
   "id": "Unhappy_brutall_leo",
@@ -122,8 +133,9 @@
   "artist": "DJ MurrMyau",
   "album": "Black & W   creator DJ MurrMyau",
   "year": "2026",
-  "duration": 342
-},    
+  "duration": 342,
+  "happy": ""
+  },    
   {
   "id": "Space_walk_v3",
   "url": "/audio/Space_walk_v3.mp3",
@@ -131,8 +143,9 @@
   "artist": "DJ MurrMyau",
   "album": "Black & W   creator DJ MurrMyau",
   "year": "2026",
-  "duration": 584
-},    
+  "duration": 584,
+  "happy": ""
+  },    
   {
   "id": "Space_walk_v35",
   "url": "/audio/Space_walk_v35.mp3",
@@ -140,6 +153,6 @@
   "artist": "DJ MurrMyau",
   "album": "Black & W   creator DJ MurrMyau",
   "year": "2026",
-  "duration": 460
+  "duration": 460,
 }
 ]
