@@ -133,7 +133,7 @@ function onTrackChange(audioRef, track, idplaylist) {
     console.log(audioRef.value)
 audioGlobRef.value = audioRef.value}
     if (track != null) { 
-  marqueText = `Трек: ${track.title || ' --- '} | Артист: ${track.artist || ' --- '} | 'Альбом: '${activeTrack1.value.album || ' --- '} | Year: ${ activeTrack1.value.year || ' -- '} | Поздравительный комент: ${activeTrack1.value.happy} | Длительность: ${Math.round(activeTrack1.value.duration/60)+' min '+Math.round(activeTrack1.value.duration%60) || track.duration } сек`;
+  marqueText = `Трек: ${track.title || ' --- '} | Артист: ${track.artist || ' --- '} | 'Альбом: '${activeTrack1.value.album || ' --- '} | Year: ${ activeTrack1.value.year ||' -- '} | Поздравительный комент: ${activeTrack1.value.happy |' --- '} | Длительность: ${Math.round(activeTrack1.value.duration/60)+' min '+Math.round(activeTrack1.value.duration%60) || track.duration } сек`;
 console.log(audioGlobRef.value)
 }
 if (!audioContext.value) {
