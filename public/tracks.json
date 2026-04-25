@@ -1,4 +1,20 @@
-[      {
+[         {
+    "id": "Jump",
+    "url": "/audio/Jump1.mp3",
+    "title": "Jump (mix)",
+    "artist": "DJ MurrMyau",
+    "album": "Black & W   creator DJ MurrMyau",
+    "year": "2026",
+    "duration": 331
+  }, {
+    "id": "Metelica",
+    "url": "/audio/Metelica_v2.mp3",
+    "title": "Metelica",
+    "artist": "DJ MurrMyau",
+    "album": "Black & W   creator DJ MurrMyau",
+    "year": "2026",
+    "duration": 198
+  },{
     "id": "S_Vals_Full",
     "url": "/audio/S_Vals_Full.mp3",
     "title": "Dogs Vals Full",
