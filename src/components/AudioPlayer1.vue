@@ -161,7 +161,12 @@ function togglePlayPause() {console.log(props.stop2)
     audio.src = currentTrack.value.url
 	audio.crossOrigin = "anonymous"; 
     audio.play().catch(console.error)
-  
+        emit('play-state', false, idplaylist )
+       emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+        emit('stop-state',
+         true,
+         idplaylist.value
+        )
   }
 }
 
