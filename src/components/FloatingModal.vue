@@ -104,6 +104,10 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+  @media (max-width: 600px) {
+  .modal-close {
+  right: 20%;}
+  }  
 .modal-overlay {
   position: fixed;
   top: 0;
