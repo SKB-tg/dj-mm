@@ -26,17 +26,10 @@
 Тем Видя красоту сквозь...****Ты разбиваешь меня
 Ты разбиваешь меня — ты делаешь меня верующим.*
 "Believer" от группы Imagine Dragons!
-            ============
+            ============                     
 Welcome to the music app!
 Here you'll find the best tracks from around the world.
 Enjoy the sound, visuals, and smooth interface.
-DJ MurrMyau's advice: to get the most out of this music,
-listen to it with high-quality headphones or a home stereo system.
-**First things first: I'll say everything that's inside my head.
-I'm tired and exhausted by the way things were.
-            That Vidya beauty through...**** You break me.
-You break me—you make me a believer.*
-          "Believer" by Imagine Dragons
 <slot/>
 </div>
 </div>
