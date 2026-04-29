@@ -104,10 +104,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-  @media (max-width: 600px) {
-  .modal-close {
-  right: 20%;}
-  }  
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -124,6 +120,9 @@ onUnmounted(() => {
 
 .modal-content {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(135deg, #1a1a2e, #16213e);
   color: white;
   border-radius: 16px;
@@ -137,9 +136,6 @@ onUnmounted(() => {
 }
 
 .modal-close {
-  position: absolute;
-  top: 10px;
-  right: 26%;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.15);
   border: none;
