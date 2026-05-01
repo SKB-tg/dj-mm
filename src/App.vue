@@ -29,7 +29,7 @@
       <label class="toggle-switch" >
   <input id="toggle" type="checkbox" class="toggle-input" switch />
   <div class="toggle-track"></div>
-  <span class="toggle-label">AutoPLAY</span>
+  <span class="toggle-label">BACK</span>
   </label>
        <AudioPlayer1 v-if="!stop1" :playlist="Spaceelectro" :stop1="stop1" :isPlayingGl="isPlayingGl"
         @track-change="onTrackChange"
