@@ -108,7 +108,7 @@ Electron.value = [{"id": "Big_Time_Piter_Gabriel_1986", 'title': 'Big Time Piter
 ]
  rw.value = [{"id": "Dep_Mode_vinil_A_41", 'title': '4 Tracks: Depecne Mode', 'artist': 'Depecne Mode', 'url': '/audio/Dep_Mode_vinil_A_41.mp3', "year": "1986", 'duration': 1200},
     {"id": "Zodiak_album_1981_A1_3tr", 'title': 'Zodiak album 1981 A1 3 track', 'artist': 'Zodiak', 'url': '/audio/Zodiak_album_1981_A1_3tr.mp3', "year": "1981", 'duration': 1200},
-    {"id": "Jean_Michel_Jarre_Oxygene_Madis_Cover", 'title': 'Jean Michel Jarre Oxygene Madis Cover track', 'artist': 'Jean Michel Jarre', 'url': '/audio/Jean_Michel_Jarre_Oxygene_Madis_Cover.mp3', "year": "1999", 'duration': 320},
+    {"id": "Jean_Michel_Jarre_Oxygene_Madis_Cover", 'title': 'Jean Michel Jarre Oxygene Madis Cover track', 'artist': 'Jean Michel Jarre', 'url': '/audio/Jean_Michel_Jarre_Oxygene_Madis_Cover.mp3', "year": "1999", 'duration': 436},
    { "id": "Bushwacka_Continuous_Mix", 'title': 'Bushwacka Tracks 2020', 'artist': 'DJ Bushwacka', 'url': 'https://s3.ru1.storage.beget.cloud/ff4460111384-artistic-carwyn/dj_mm%2Faudio%2Flongtrack%2FBushwacka_Continuous_Mix.mp3', "year": "2003", 'duration': 4682},
    { 'title': 'Track 2003', 'artist': 'DJ Bushwacka', 'url': 'audio/Bushwackas.mp3', "year": "2003", 'duration': 1200}, 
  {"id": "morning_trash", "url": "https://s3.ru1.storage.beget.cloud/ff4460111384-artistic-carwyn/dj_mm%2Faudio%2Frecomendation%2Fmorning_trash.mp3", "title": "Morning trash", "artist": "DJ MurrMyau", "album": "Black & W  creator DJ MurrMyau", "year": "2026", "duration": 926},
