@@ -553,7 +553,7 @@ function connectAudioToVisualizer(track) {
 
 /* Текст подписи */
 .toggle-label {
-  margin-left: 16px; /* ml-3 */
+  margin-left: 8px; /* ml-3 */
   font-size: 12px;   /* text-sm */
   font-weight: 600;  /* font-medium */
   color: #FFF;    /* text-gray-900 */
