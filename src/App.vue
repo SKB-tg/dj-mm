@@ -488,7 +488,7 @@ function connectAudioToVisualizer(track) {
 .toggle-switch {
   position: absolute;
   left: 38%;
-  top: 20px;
+  top: 18px;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
