@@ -117,6 +117,7 @@ Electron.value = [{"id": "Big_Time_Piter_Gabriel_1986", 'title': 'Big Time Piter
     {"id": "Adrenalin", "url": "audio/Adrenalin.mp3", "title": "Adrenalin", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2025", "duration": 175},
     {"id": "Space_dance_2_remix", "url": "audio/Space_dance_2.mp3", "title": "Space dance 2 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 562},
     {"id": "Space_dance_3remix", "url": "audio/Space_dance_3_1.mp3", "title": "Space dance 3 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
+    {"id": "Jump3_1", "url": "audio/Jump3_1.mp3", "title": "Jump3", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
 {"id": "L_D_mix", 'title': 'Remix "Beliver"', 'artist': 'DJ MurrMyau', "year": "2025", "album": "Black & W   creator DJ MurrMyau", 'url': 'audio/I_D_mix.mp3', 'duration': 300 }]
 // Общее состояние для всех плееров
 const activeTrack1 = ref(null)
