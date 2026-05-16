@@ -18,7 +18,7 @@
         </button>
       <button @click="playNext(1)" class="btn btn-secondary-right">⏭</button>
     </div>
- <div class="marquee morquee-player" style="margin-top: 5px;"><span>{{ 'Мой альбом : 2025 - 26 г. : "Black & W" . вошли 15 треков в стиле техно-электро. Мои первые экспиременты на оборудовании DAW "Cakewalk Sonar" ' }}</span></div>        
+ <div class="marquee morquee-player" style="margin-top: 5px;"><span>{{ 'Мой альбом : 2025 - 26 г. : "Black & W" . вошли более 15 треков в стиле техно-электро. Мои первые экспиременты на оборудовании DAW "Cakewalk Sonar" ' }}</span></div>        
 
     <!-- Прогресс-бар (опционально) -->
     <div v-if="currentTrack" class="progress" @click="onProgressClick">
