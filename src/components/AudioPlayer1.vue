@@ -183,7 +183,7 @@ function playNext(playIndex) {
   audio.src = currentTrack.value.url
   audio.crossOrigin = "anonymous";
   audio.pause()
-      audioRef.currentTime == 0
+      audio.currentTime == 0
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
         return
@@ -204,7 +204,7 @@ function playNext(playIndex) {
   audio.src = currentTrack.value.url
   audio.crossOrigin = "anonymous";
  audio.pause()
-  audioRef.currentTime == 0
+  audio.currentTime == 0
 	isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
 }
