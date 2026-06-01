@@ -131,7 +131,7 @@ function togglePlayPause() {console.log(props.stop2)
     if (isPlaying.value) {
     audio.pause()
   } else {
-        if (progressPercent.value && !props.stop2 && !props.stop3) {console.log()
+        if ((progressPercent.value > 0) && !props.stop2 && !props.stop3) {console.log()
           audio.currentTime = Math.round(currentTrack.value.duration * progressPercent.value)/100
         audio.play().catch(console.error)
         return
@@ -182,8 +182,8 @@ function playNext(playIndex) {
 
   audio.src = currentTrack.value.url
   audio.crossOrigin = "anonymous"; 
-  audio.play().catch(console.error)
-  isPlaying.value = true
+  audio.pause()
+  isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
         return
     }
@@ -202,8 +202,8 @@ function playNext(playIndex) {
   const audio = audioRef.value
   audio.src = currentTrack.value.url
   audio.crossOrigin = "anonymous"; 
-  audio.play().catch(console.error)
-  isPlaying.value = true
+  audio.pause()
+  isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
 }
 
