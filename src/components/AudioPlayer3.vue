@@ -172,9 +172,14 @@ function playNext(playIndex) {
     console.log(tracks.value)
 
   audio.src = currentTrack.value.url
-  audio.play().catch(console.error)
-  isPlaying.value = true
+  // audio.play().catch(console.error)
+  // isPlaying.value = true
+  //      emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+  audio.pause()
+      progressPercent.value = 0
+  isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+		progressPercent.value = 0
         return
     }
    if (currentTrack.value) {
@@ -191,9 +196,14 @@ function playNext(playIndex) {
   currentTrack.value = props.playlist[nextIndex]
   const audio = audioRef.value
   audio.src = currentTrack.value.url
-  audio.play().catch(console.error)
-  isPlaying.value = true
+//   audio.play().catch(console.error)
+//   isPlaying.value = true
+// emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+  audio.pause()
+      progressPercent.value = 0
+  isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+		progressPercent.value = 0
 }
 
 // Клик по прогресс-бару
