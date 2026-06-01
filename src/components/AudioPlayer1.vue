@@ -45,7 +45,6 @@ const props = defineProps({
   stop2: Boolean,
   stop3: Boolean
 })
-// 👇 ОБЯЗАТЕЛЬНО объявляем, какие события компонент может эмитить
 const emit = defineEmits([
     //'playlist-change',     // когда сменился трек
 'stop-state',
@@ -61,6 +60,7 @@ const isPlaying = ref(false)
 const idplaylist = ref('111')
 const progressPercent = ref(0)
    const tracks = ref(null)
+const hoolehoop_mode = ref(false)
 const audio = audioRef.value
 
 //const  marqueText1 = ref(`My Album : Трек: ${tracks[0].title || ' --- '} | Артист: ${tracks[0].artist || ' --- '} |`)
@@ -96,9 +96,11 @@ onMounted(async() => {
   })
 
   audio.addEventListener('ended',() => {
-    playNext(1)
+    	  if (hoolehoop_mode) {
+   playNext(1)
+	  }
     emit('stop-state',
-     false,
+     true,
      idplaylist.value
     )
   })
@@ -203,10 +205,16 @@ function playNext(playIndex) {
   const audio = audioRef.value
   audio.src = currentTrack.value.url
   audio.crossOrigin = "anonymous";
- audio.pause()
-  progressPercent.value = 0
-	isPlaying.value = false
+  if (hoolehoop_mode) {
+  audio.play().catch(console.error)
+  isPlaying.value = true
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  } else {
+  audio.pause()
+      progressPercent.value = 0
+  isPlaying.value = false
+       emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  }
 }
 
 // Клик по прогресс-бару
