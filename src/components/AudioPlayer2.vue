@@ -219,7 +219,6 @@ function playNext(playIndex) {
       progressPercent.value = 0
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
-		progressPercent.value = 0
         return
     }
    if (currentTrack.value) {
@@ -240,7 +239,6 @@ function playNext(playIndex) {
       progressPercent.value = 0
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
-		progressPercent.value = 0
 }
 
 // Клик по прогресс-бару
