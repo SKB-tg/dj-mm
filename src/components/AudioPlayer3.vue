@@ -55,8 +55,8 @@ const currentTrack = ref(null)
 const isPlaying = ref(false)
 const idplaylist = ref('333')
 const progressPercent = ref(0)
-   const tracks = ref(null)
-
+const tracks = ref(null)
+const hoolehoop_mode = ref(false)
 // Инициализация
 onMounted(async() => {
   // if (!props.PlaylistChange) {
@@ -89,7 +89,9 @@ onMounted(async() => {
   })
 
   audio.addEventListener('ended',() => {
+	  if (hoolehoop_mode) {
    playNext(1)
+	  }
         emit('stop-state',
      false,
      idplaylist.value
@@ -172,13 +174,16 @@ function playNext(playIndex) {
     console.log(tracks.value)
 
   audio.src = currentTrack.value.url
-  // audio.play().catch(console.error)
-  // isPlaying.value = true
-  //      emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  if (hoolehoop_mode) {
+  audio.play().catch(console.error)
+  isPlaying.value = true
+       emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  } else {
   audio.pause()
       progressPercent.value = 0
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  }
         return
     }
    if (currentTrack.value) {
@@ -195,13 +200,16 @@ function playNext(playIndex) {
   currentTrack.value = props.playlist[nextIndex]
   const audio = audioRef.value
   audio.src = currentTrack.value.url
-//   audio.play().catch(console.error)
-//   isPlaying.value = true
-// emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  if (hoolehoop_mode) {
+  audio.play().catch(console.error)
+  isPlaying.value = true
+       emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  } else {
   audio.pause()
       progressPercent.value = 0
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  }
 }
 
 // Клик по прогресс-бару
