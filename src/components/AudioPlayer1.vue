@@ -183,9 +183,10 @@ function playNext(playIndex) {
   audio.src = currentTrack.value.url
   audio.crossOrigin = "anonymous";
   audio.pause()
-      audio.currentTime == 0
+      progressPercent.value = 0
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+		progressPercent.value = 0
         return
     }
    if (currentTrack.value) {
@@ -204,9 +205,10 @@ function playNext(playIndex) {
   audio.src = currentTrack.value.url
   audio.crossOrigin = "anonymous";
  audio.pause()
-  audio.currentTime == 0
+  progressPercent.value = 0
 	isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	progressPercent.value = 0
 }
 
 // Клик по прогресс-бару
