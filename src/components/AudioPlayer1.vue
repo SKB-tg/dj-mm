@@ -96,11 +96,11 @@ onMounted(async() => {
   })
 
   audio.addEventListener('ended',() => {
-    	  if (hoolehoop_mode) {
+    	  if (!hoolehoop_mode) {
    playNext(1)
 	  }
     emit('stop-state',
-     true,
+     false,
      idplaylist.value
     )
   })
