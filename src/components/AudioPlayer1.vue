@@ -181,7 +181,8 @@ function playNext(playIndex) {
     console.log(tracks.value)
 
   audio.src = currentTrack.value.url
-  audio.crossOrigin = "anonymous"; 
+  audio.crossOrigin = "anonymous";
+	audioRef.currentTime == 0
   audio.pause()
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
@@ -201,7 +202,8 @@ function playNext(playIndex) {
   currentTrack.value = props.playlist[nextIndex]
   const audio = audioRef.value
   audio.src = currentTrack.value.url
-  audio.crossOrigin = "anonymous"; 
+  audio.crossOrigin = "anonymous";
+	audioRef.currentTime == 0
   audio.pause()
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
