@@ -131,6 +131,7 @@ const stop3 = ref(false)
 function onTrackChange(audioRef, track, idplaylist) {
      //if (activeTrack1.value) {
         activeTrack1.value = track
+	globalProgress.value = 0
     // }
     if (audioRef) {
     console.log(audioRef.value)
