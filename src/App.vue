@@ -34,8 +34,6 @@
     </div>
  <div class="marquee" v-if="activeTrack1"><span>{{ marqueText }}</span></div>        
 <div class="track-info" v-if="activeTrack1">{{  "-" + " " + activeTrack1.id + " " + "-"+ " " + activeTrack1.title + " " + "-" }}</div>
- <div class="marquee" v-if="activeTrack1"><span>{{ marqueText }}</span></div>        
-<div class="track-info" v-if="activeTrack1">{{ activeTrack1.title }}</div>
 <div class="diz"> 
       <label class="toggle-switch" >
   <input id="toggle" type="checkbox" class="toggle-input" switch />
