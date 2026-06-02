@@ -21,8 +21,19 @@
 
   <!-- Общий прогресс-бар -->
   <div class="progress-container" v-if="activeTrack1" @click="onProgressClickG">
-      <div class="progress-glob" v-if="activeTrack1" :style="{ width: globalProgress + '%' }"></div>
+      <div class="progress-blob" v-if="activeTrack1" :style="{ width: globalProgress + '%' }"><div class="inter-blob" style="
+            display: block;
+            background-color: aquamarine;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            position: absolute;
+            top: -5px;
+            right: 0;">
+           </div></div>
     </div>
+ <div class="marquee" v-if="activeTrack1"><span>{{ marqueText }}</span></div>        
+<div class="track-info" v-if="activeTrack1">{{  "-" + " " + activeTrack1.id + " " + "-"+ " " + activeTrack1.title + " " + "-" }}</div>
  <div class="marquee" v-if="activeTrack1"><span>{{ marqueText }}</span></div>        
 <div class="track-info" v-if="activeTrack1">{{ activeTrack1.title }}</div>
 <div class="diz"> 
@@ -377,8 +388,8 @@ function connectAudioToVisualizer(track) {
  label.toggle-switch {position: absolute;
   left: 45px;
   }           
-        }
          .track-info {display: block;
+            width: 95%;
             margin: 15px 0;
             font-size: 18px;
             font-weight: bold;
@@ -391,7 +402,7 @@ function connectAudioToVisualizer(track) {
         .progress-container {
             width: 90%;
             max-width: 600px;
-            height: 8px;
+            height: 20px;
             background: rgba(255, 255, 255, 0.11);
             border-radius: 4px;
             margin: 10px auto;
@@ -399,12 +410,29 @@ function connectAudioToVisualizer(track) {
             cursor: pointer;
         }
 
-        .progress-glob {
+        .progress-blob {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+            margin: 7px 0;
             height: 6px;
+            min-width: 16px;
             background: linear-gradient(90deg, #0ff, #0f0);
             border-radius: 4px;
             transition: width 0.1s linear;
         } 
+        .inter-glob {
+            display: block;
+            background-color: aquamarine;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            position: absolute;
+            right: -5px;
+            z-index: 10000;
+        }
+
                   .logo-wrapper {
             position: relative;
             display: inline-block;
