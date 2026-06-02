@@ -18,13 +18,16 @@
         </button>
       <button @click="playNext(1)" class="btn btn-secondary-right">⏭</button>
     </div>
- <div class="marquee morquee-player" style="margin-top: 5px;"><span>{{ 'Мой альбом : 2025 - 26 г. : "Black & W" . вошли более 15 треков в стиле техно-электро. Мои первые экспиременты на оборудовании DAW "Cakewalk Sonar" ' }}</span></div>        
+ <div class="marquee morquee-player" style="margin-top: 5px;"><span>{{ 'Мой альбом : 2025 - 26 г. : "Black & W" . вошли 15 треков в стиле техно-электро. Мои первые экспиременты на оборудовании DAW "Cakewalk Sonar" ' }}</span></div>        
 
     <!-- Прогресс-бар (опционально) -->
     <div v-if="currentTrack" class="progress" @click="onProgressClick">
       <div class="progress-fill" :style="{ width: progressPercent + '%' }"></div>
     </div>
-      <div class="fut" style="left: 35px;"></div><div class="fut" style="right: 35px;"></div>
+      <div class="fut" style="left: 35px;"></div><div class="fut" style="right: 35px;"><div ref="hoolehoop" @click="onhoolehoop" style="position:sticky;width: 100%;height: 100%;" class="btn hoolehoops">
+        <span v-if="hoolehoop_mode">auto-play</span><span v-if="!hoolehoop_mode">no auto-pl</span>
+      </div>
+    </div>
     <!-- Скрытый аудио-элемент -->
     <audio ref="audioRef" crossorigin="anonymous" preload="metadata"></audio>
   </div>
@@ -60,10 +63,11 @@ const isPlaying = ref(false)
 const idplaylist = ref('111')
 const progressPercent = ref(0)
    const tracks = ref(null)
-const hoolehoop_mode = ref(false)
 const audio = audioRef.value
+const hoolehoop_mode = ref(true)
+const hoolehoop = ref(null)
+ const butImg = ref(0)
 
-//const  marqueText1 = ref(`My Album : Трек: ${tracks[0].title || ' --- '} | Артист: ${tracks[0].artist || ' --- '} |`)
 // Инициализация
 onMounted(async() => {
   // if (!props.PlaylistChange) {
@@ -79,14 +83,10 @@ onMounted(async() => {
 
   const audio = audioRef.value
   if (!audio) return
-  // audio.src = currentTrack.value.url
-  // emit('track-change', audioRef, currentTrack.value, idplaylist.value)
-
   // События аудио
   audio.addEventListener('timeupdate', () => {
     if (audio.duration) {
       progressPercent.value = (audio.currentTime / audio.duration) * 100
-          // 👇 Эмитим прогресс
     emit('progress-update', {
       progressPercent,
       currentTime: audio.currentTime,
@@ -96,13 +96,13 @@ onMounted(async() => {
   })
 
   audio.addEventListener('ended',() => {
-    	  if (!hoolehoop_mode) {
+    	  if (hoolehoop_mode.value) {
    playNext(1)
 	  }
-    emit('stop-state',
-     false,
-     idplaylist.value
-    )
+    // emit('stop-state',
+    //  true,
+    //  idplaylist.value
+    // )
   })
 
   audio.addEventListener('play', () => {
@@ -122,54 +122,44 @@ onMounted(async() => {
 
   audio.addEventListener('pause', () => {
     isPlaying.value = false
+
     })
 })
 
 // Переключение Play/Pause
 function togglePlayPause() {console.log(props.stop2)
-  const audio = audioRef.value
-  if (!audio) {// || (props.isPlayingGl === true)){
-  return}
-    if (isPlaying.value) {
+   const audio = audioRef.value
+  if (!audio) return
+
+  if (isPlaying.value) {
     audio.pause()
+       isPlaying.value = false
   } else {
-        if ((progressPercent.value > 0) && !props.stop2 && !props.stop3) {console.log()
-          audio.currentTime = Math.round(currentTrack.value.duration * progressPercent.value)/100
+            if ((progressPercent.value > 0) && !props.stop2 && !props.stop3) {
+          audio.currentTime == Math.round(currentTrack.value.duration * progressPercent.value)/100
         audio.play().catch(console.error)
         return
-        }   
-      //URL.revokeObjectURL(audio.src)
-        
+        } 
     // Если трек не загружен — загружаем
-    if (!currentTrack.value) {      console.log(currentTrack.value)
-      
+    if (!currentTrack.value) {        console.log(currentTrack.value)
       if (props.playlist.length > 0) {
         currentTrack.value = props.playlist
       } else return
-    } 
-            if (!props.stop2 && !props.stop3) { console.log(currentTrack.value)
-            if (currentTrack.value.id === 'S_Vals_Full') { nextTick('S_Vals_Full')}
+    }
+                if (!props.stop2 && !props.stop3) { 
+                // if (currentTrack.value.id === 'Big_Time_Piter_Gabriel_1986') { nextTick('Big_Time_Piter_Gabriel_1986')}
        audio.src = currentTrack.value.url
-	   audio.crossOrigin = "anonymous"; 
        audio.play().catch(console.error)
+       isPlaying.value = true
       emit('play-state', false, idplaylist )
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
-        emit('stop-state',
-         true,
-         idplaylist.value
-        )
+        emit('stop-state', true, idplaylist.value)
+      //playNext()
         return
-        }                           console.log(currentTrack.value)
+            }                           
     audio.src = currentTrack.value.url
-	audio.crossOrigin = "anonymous"; 
     audio.play().catch(console.error)
-        emit('play-state', false, idplaylist )
-       emit('track-change', audioRef, currentTrack.value, idplaylist.value)
-        emit('stop-state',
-         true,
-         idplaylist.value
-        )
-  }
+    }
 }
 
 function playNext(playIndex) { 
@@ -183,12 +173,17 @@ function playNext(playIndex) {
     console.log(tracks.value)
 
   audio.src = currentTrack.value.url
-  audio.crossOrigin = "anonymous";
+   if (hoolehoop_mode.value) {
+  audio.play().catch(console.error)
+  isPlaying.value = true
+       emit('track-change', audioRef, currentTrack.value, idplaylist.value)
+	  } else {
   audio.pause()
       progressPercent.value = 0
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
-        return
+	  }
+    return
     }
    if (currentTrack.value) {
     const currentIndex = props.playlist.findIndex(t => t.url === currentTrack.value.url)
@@ -204,8 +199,7 @@ function playNext(playIndex) {
   currentTrack.value = props.playlist[nextIndex]
   const audio = audioRef.value
   audio.src = currentTrack.value.url
-  audio.crossOrigin = "anonymous";
-  if (hoolehoop_mode) {
+	  if (hoolehoop_mode.value) {
   audio.play().catch(console.error)
   isPlaying.value = true
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
@@ -215,7 +209,7 @@ function playNext(playIndex) {
   isPlaying.value = false
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
 	  }
-}
+    }
 
 // Клик по прогресс-бару
 function onProgressClick(event) {
@@ -232,12 +226,29 @@ async function nextTick(track) {
   // tracks.value = await response.json()
 }
 
+function onhoolehoop() {
+ 
+
+  butImg.value++ 
+  if ((Math.floor(butImg.value/2) - butImg.value/2) === 0) {
+  hoolehoop.value.style = "color: #ffff;"
+  //limg.value.style = "height: 630px;width: 630px;"
+  // hoolehoop.value.style = "width: 30%;"
+  hoolehoop_mode.value = true
+
+  } else {
+      hoolehoop.value.style = "color: gray;"
+
+  hoolehoop.value.style = "box-shadow: none;"
+hoolehoop_mode.value = false  }           
+  }
+
 </script>
 
 <style scoped>
 .audio-player {
   border: 1px solid #2a0464;
-        background-color: rgb(40, 2, 84);
+        background-color: hsl(349, 95%, 17%);
   position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -313,78 +324,12 @@ async function nextTick(track) {
   border-radius: 10px 10px 0px 0px;
   background-color: #32383bf6;
 }
+.hoolehoops {
+  margin: 0;
+padding: 1px;
+font-size: 10px;  /* width:65px;
+  height: 15px; */
+    border-radius: 10px 10px 0px 0px;
+  box-shadow:  0px 3px 3px 5px #ffae00b3;
+}
 </style>
-
-/* Контейнер (аналог label)
-.toggle-switch {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none; /* Чтобы текст не выделялся при кликах *//*
-}
-
-/* Скрытый инпут (аналог sr-only) */
-.toggle-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-/* Трек переключателя (серый фон) */
-.toggle-track {
-  width: 22px;  /* w-11 (11 * 4px) */
-  height: 8px; /* h-6 (6 * 4px) */
-  background-color: #000; /* bg-gray-200 */
-  border-radius: 9999px; /* rounded-full */
-  transition: background-color 0.2s;
-  /* border-color: #d1d5db;
-  border-width: 1px; */
-}
-
-/* Состояние фокуса (синее кольцо вокруг) */
-.toggle-input:focus + .toggle-track {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(147, 196, 253, 0.498); /* ring-4 ring-blue-300 */
-}
-
-/* Состояние "Включено" (синий фон) */
-.toggle-input:checked + .toggle-track {
-  background-color: #278268; /* bg-blue-600 */
-}
-
-/* Кружок (псевдоэлемент ::after) */
-.toggle-track::after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 1px;
-  width: 8px;  /* w-5 (5 * 4px) */
-  height: 8px; /* h-5 (5 * 4px) */
-  background-color: #278268;
-  border: 1px solid #d1d5db;
-  border-radius: 50%;
-  transition: transform 0.2s, border-color 0.2s;
-}
-
-/* Движение кружка и смена рамки при включении */
-.toggle-input:checked + .toggle-track::after {
-  transform: translateX(10px); /* translate-x-full (100% от ширины кружка) */
-  border-color: white;
-}
-
-/* Текст подписи */
-.toggle-label {
-  margin-left: 16px; /* ml-3 */
-  font-size: 10px;   /* text-sm */
-  font-weight: 300;  /* font-medium */
-  color: #278268;    /* text-gray-900 */
-}  */*/
