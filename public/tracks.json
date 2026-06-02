@@ -1,5 +1,5 @@
 [{
-    "id": "Jump",
+    "id": 1,
     "url": "/audio/Jump1.mp3",
     "title": "Jump (mix)",
     "artist": "DJ MurrMyau",
@@ -8,7 +8,7 @@
     "happy": "Дата записи 24.04.2026 - в день рождения для Елены Фёдоровны : Recording date 24.04.2026 - bithday Alena Phedorovna",
     "duration": 331
       }, {
-    "id": "Music box",
+    "id": 2,
     "url": "/audio/Abrakadabra_v42.mp3",
     "title": "Music box",
     "artist": "DJ MurrMyau",
@@ -17,7 +17,7 @@
     "happy": "",
     "duration": 296
   }, {
-    "id": "Alternativnaya",
+    "id": 3,
     "url": "/audio/Alt3.mp3",
     "title": "Alternativnaya",
     "artist": "DJ MurrMyau",
@@ -26,7 +26,7 @@
     "happy": "",
     "duration": 372
   }, {
-        "id": "Metelica",
+        "id": 4,
     "url": "/audio/Metelica_v21.mp3",
     "title": "Metelica",
     "artist": "DJ MurrMyau",
@@ -35,7 +35,7 @@
     "happy": "",
     "duration": 198
   }, {
-    "id": "S_Vals_Full",
+    "id": 5,
     "url": "/audio/S_Vals_Full.mp3",
     "title": "Dogs Vals Full",
     "artist": "DJ MurrMyau",
@@ -45,7 +45,7 @@
     "happy": ""
   },
     {
-    "id": "kolybel",
+    "id": 6,
     "url": "/audio/kolybel.mp3",
     "title": "Kolibelnaya",
     "artist": "DJ MurrMyau",
@@ -55,7 +55,7 @@
     "happy": ""
   },
     {
-    "id": "you_brutal_leo_v21",
+    "id": 7,
     "url": "/audio/you_brutal_leo_v21.mp3",
     "title": "You brutal leo",
     "artist": "Неизвестно",
@@ -65,7 +65,7 @@
     "happy": ""
   },
   {
-    "id": "Limbo",
+    "id": 8,
     "url": "/audio/Limbo.mp3",
     "title": "Limbo",
     "artist": "Неизвестно",
@@ -75,7 +75,7 @@
     "happy": ""
   },
   {
-    "id": "Meteorite_is_approaching",
+    "id": 9,
     "url": "/audio/Meteorite_is_approaching.mp3",
     "title": "Meteorite is approaching",
     "artist": "DJ MurrMyau",
@@ -85,7 +85,7 @@
     "happy": ""
   },
     {
-    "id": "About",
+    "id": 10,
     "url": "/audio/About.mp3",
     "title": "About",
     "artist": "DJ MurrMyau",
@@ -95,7 +95,7 @@
     "happy": ""
 },	
   {
-    "id": "morning_trash",
+    "id": 11,
     "url": "/audio/morning_trash.mp3",
     "title": "Morning trash",
     "artist": "DJ MurrMyau",
@@ -105,7 +105,7 @@
     "happy": ""
     },
       {
-    "id": "Adrenalin",
+    "id": 12,
     "url": "/audio/Adrenalin.mp3",
     "title": "Adrenalin",
     "artist": "DJ MurrMyau",
@@ -115,7 +115,7 @@
    "happy": ""
    },
     {
-    "id": "B&W-Best",
+    "id": 13,
     "url": "/audio/B&W-Best.mp3",
     "title": "Black & W Best",
     "artist": "DJ MurrMyau",
@@ -125,7 +125,7 @@
    "happy": ""
    },
     {
-    "id": "Remix_the_hall_of_the_mountain_king_E_G",
+    "id": 14,
     "url": "/audio/Remix_the_hall_of_the_mountain_king_E_G.mp3",
     "title": "Remix 'the Hall of the Mountain King' E. G.",
     "artist": "DJ MurrMyau",
@@ -135,7 +135,7 @@
    "happy": ""
    },
   {
-    "id": "The_Legend",
+    "id": 15,
     "url": "/audio/The_Legend.mp3",
     "title": "The Legend",
     "artist": "DJ MurrMyau",
@@ -145,7 +145,7 @@
     "happy": ""
   },
   {
-  "id": "Unhappy_brutall_leo",
+  "id": 16,
   "url": "/audio/you_brutal1_full23.mp3",
   "title": "Unhappy brutall leo",
   "artist": "DJ MurrMyau",
@@ -155,7 +155,7 @@
   "happy": ""
   },    
   {
-  "id": "Space_walk_v3",
+  "id": 17,
   "url": "/audio/Space_walk_v3.mp3",
   "title": "Space_walk_v3",
   "artist": "DJ MurrMyau",
@@ -165,7 +165,7 @@
   "happy": ""
   },    
   {
-  "id": "Space_walk_v35",
+  "id": 18,
   "url": "/audio/Space_walk_v35.mp3",
   "title": "Space_walk_v35",
   "artist": "DJ MurrMyau",
