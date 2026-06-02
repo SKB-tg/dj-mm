@@ -385,7 +385,8 @@ function connectAudioToVisualizer(track) {
             @media (max-width: 600px) {
  label.toggle-switch {position: absolute;
   left: 45px;
-  }           
+  }     
+			}
          .track-info {display: block;
             width: 95%;
             margin: 15px 0;
