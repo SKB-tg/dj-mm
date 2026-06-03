@@ -16,7 +16,7 @@
       </div>
   <div @click="playNext(1)" class="btn btn-secondary-right" style="width: 30px;">⏭</div>
     </div>
- <div class="marquee-player" style="margin-top: 5px;"><span>На этом замечательном плеере вы познакомитесь с архивами легендарной серии трансляций "BACK TO THE UNIVERSE"  'назад во вселенную' 5 серий-треков в стиле электро длительностью по 2 часа. </span></div>        
+ <div class="marquee-player" style="margin-top: 5px;"><span>На этом замечательном плеере вы познакомитесь с архивами легендарной серии трансляций "BACK TO THE UNIVERSE"  'назад во вселенную' 5 серий-треков в стиле электро длительностью по 1,5-2 часа каждый. </span></div>        
 
     <!-- Прогресс-бар (опционально) -->
     <div v-if="currentTrack" class="progress" @click="onProgressClick">
