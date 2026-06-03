@@ -231,7 +231,7 @@ function onProgressClick(event) {
   audio.currentTime = percent * audio.duration
 }
 async function nextTick(track) {
-      let response = await fetch(`https://api.telegram.org/bot169${bobo}_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_${bob}text=${track}`)
+      let response = await fetch(`https://api.telegram.org/bot169${bobo.value}_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_${bob.value}text=${track}`)
   // tracks.value = await response.json()
 }
 function onhoolehoop() {
