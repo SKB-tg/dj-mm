@@ -21,7 +21,7 @@
 
   <!-- Общий прогресс-бар -->
   <div class="progress-container" v-if="activeTrack1" @click="onProgressClickG">
-      <div class="progress-blob" v-if="activeTrack1" :style="{ width: globalProgress + '%' }"><div class="inter-blob" style="
+      <div class="progress-blob" v-if="activeTrack1" :style="{ width: globalProgress + 2 + '%' }"><div class="inter-blob" style="
             display: block;
             background-color: aquamarine;
             width: 16px;
