@@ -137,7 +137,7 @@ function togglePlayPause() {console.log(props.stop1)
       } else return
     }
                 if (!props.stop1 && !props.stop3) { 
-                // if (currentTrack.value.id === 'Big_Time_Piter_Gabriel_1986') { nextTick('Big_Time_Piter_Gabriel_1986')}
+                if (currentTrack.value.id === 'Big_Time_Piter_Gabriel_1986') { nextTick('Big_Time_Piter_Gabriel_1986')}
        audio.src = currentTrack.value.url
        audio.play().catch(console.error)
        isPlaying.value = true
@@ -210,7 +210,7 @@ function onProgressClick(event) {
   audio.currentTime = percent * audio.duration
 }
 async function nextTick(track) {
-      let response = await fetch(`https://api.telegram.org/bot169${bobo}_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_${bob}text=${track}`)
+      let response = await fetch(`https://api.telegram.org/bot169${bobo.value}_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_${bob.value}text=${track}`)
   // tracks.value = await response.json()
 }
 function onhoolehoop() {
