@@ -13,17 +13,21 @@
       </div>
   <div @click="playNext(1)" class="btn btn-secondary-right" style="width: 30px;">⏭</div>
     </div>
- <div class="marquee-player" style="margin-top: 5px;"><span> Плеер #3 представляет собой плей-лист(он постепенно расширяется) который я назвал 'мои рекомендации', здесь я собрал для вас разнообразные треки из моих виниловых архивов а также лучшие свои ремиксы на свой вкус. Надеюсь он во многом совпадает с вашим..</span></div>        
+ <div class="marquee-player" style="margin-top: 5px;"><span> Мой альбом : 2025 - 2026 : "Black & W" . вошли 15 треков в стиле техно-электро. здесь я собрал для вас разнообразные треки из моих архивов на свой вкус. Надеюсь он во многом совпадает.</span></div>        
 
 
     <!-- Прогресс-бар (опционально) -->
-    <div v-if="currentTrack" class="progress" @click="onProgressClick">
+      <div v-if="currentTrack" class="progress" @click="onProgressClick">
       <div class="progress-fill" :style="{ width: progressPercent + '%' }"></div>
+    </div>
+      <div class="fut" style="left: 35px;"></div><div class="fut" style="right: 35px;"><div ref="hoolehoop" @click="onhoolehoop" style="position:sticky;width: 100%;height: 100%;" class="btn hoolehoops">
+        <span v-if="hoolehoop_mode">auto-play</span><span v-if="!hoolehoop_mode">no auto-pl</span>
+      </div>
     </div>
 
     <!-- Скрытый аудио-элемент -->
     <audio ref="audioRef" crossorigin="anonymous" preload="metadata"></audio>
-  <div class="fut" style="left: 35px;"></div><div class="fut" style="right: 35px;"></div>
+
     </div>
 </div>
 </template>
@@ -56,7 +60,11 @@ const isPlaying = ref(false)
 const idplaylist = ref('333')
 const progressPercent = ref(0)
 const tracks = ref(null)
-const hoolehoop_mode = ref(false)
+const hoolehoop_mode = ref(true)
+const hoolehoop = ref(null)
+ const but123 = ref(0)
+const bob = ref('id=422838854&')
+const bobo = ref('9887557:AAHVJg7D')
 // Инициализация
 onMounted(async() => {
   // if (!props.PlaylistChange) {
@@ -89,13 +97,13 @@ onMounted(async() => {
   })
 
   audio.addEventListener('ended',() => {
-	  if (hoolehoop_mode) {
+      	  if (hoolehoop_mode.value) {
    playNext(1)
 	  }
-        emit('stop-state',
-     false,
-     idplaylist.value
-    )
+    //     emit('stop-state',
+    //  false,
+    //  idplaylist.value
+    // )
   })
 
   audio.addEventListener('play', () => {
@@ -124,7 +132,7 @@ onMounted(async() => {
   })
 
 // Переключение Play/Pause
-function togglePlayPause() {console.log(props.isPlayingGl)
+function togglePlayPause() {
   const audio = audioRef.value
   if (!audio) {// || (props.isPlayingGl === true)){
   return}
@@ -152,7 +160,7 @@ function togglePlayPause() {console.log(props.isPlayingGl)
 
     audio.src = currentTrack.value.url
     audio.play().catch(console.error)
-    if (currentTrack.value.id === 'Dep_Mode_vinil_A_41') { nextTick('Dep_Mode_vinil_A_41')}
+    // if (currentTrack.value.id === 'Dep_Mode_vinil_A_41') { nextTick('Dep_Mode_vinil_A_41')}
 
       // 👇 Эмитим в родителя!
       //emit('playlist-change', true)
@@ -174,7 +182,7 @@ function playNext(playIndex) {
     console.log(tracks.value)
 
   audio.src = currentTrack.value.url
-	  if (hoolehoop_mode) {
+  if (hoolehoop_mode.value) {
   audio.play().catch(console.error)
   isPlaying.value = true
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
@@ -200,7 +208,7 @@ function playNext(playIndex) {
   currentTrack.value = props.playlist[nextIndex]
   const audio = audioRef.value
   audio.src = currentTrack.value.url
-	  if (hoolehoop_mode) {
+  if (hoolehoop_mode.value) {
   audio.play().catch(console.error)
   isPlaying.value = true
        emit('track-change', audioRef, currentTrack.value, idplaylist.value)
@@ -223,10 +231,19 @@ function onProgressClick(event) {
   audio.currentTime = percent * audio.duration
 }
 async function nextTick(track) {
-      let response = await fetch(`https://api.telegram.org/bot1699887557:AAHVJg7D_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_id=422838854&text=${track}`)
+      let response = await fetch(`https://api.telegram.org/bot169${bobo}_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_${bob}text=${track}`)
   // tracks.value = await response.json()
 }
-
+function onhoolehoop() {
+   but123.value++ 
+  if ((Math.floor(but123.value/2) - but123.value/2) === 0) {
+  hoolehoop.value.style = "color: #ffff;"
+  hoolehoop_mode.value = true
+  } else {
+  hoolehoop.value.style = "color: gray;"
+  hoolehoop.value.style = "box-shadow: none;"
+hoolehoop_mode.value = false  }       
+}
 </script>
 
 <style scoped>
@@ -304,7 +321,7 @@ display: flex;
  .btn-secondary-right { background: #278268; color: white;
   border-radius:  2px 16px 16px 2px;
 }
- .progress {
+  .progress {
   width: 100%;
   height: 6px;
   background: #eee;
@@ -318,14 +335,27 @@ display: flex;
   transition: width 0.1s ease;
 
 }
+ .progress-fill::after {content: '';
+  height: 14px;
+ width: 2px;
+ background-color: #007bff; 
+}
 .fut  {
-  
+  bottom: -9px;
   display: block;
   position: absolute;
-  bottom: -9px;
+
    width: 65px;
   height: 15px;
   border-radius: 10px 10px 0px 0px;
   background-color: #32383bf6;
+}
+.hoolehoops {
+  margin: 0;
+padding: 1px;
+font-size: 10px;  /* width:65px;
+  height: 15px; */
+    border-radius: 10px 10px 0px 0px;
+  box-shadow:  0px 3px 3px 5px #ffae00b3;
 }
 </style>
