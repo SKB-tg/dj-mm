@@ -18,7 +18,7 @@
         </button>
       <button @click="playNext(1)" class="btn btn-secondary-right">⏭</button>
     </div>
- <div class="marquee morquee-player" style="margin-top: 5px;"><span>{{ 'Мой альбом : 2025 - 26 г. : "Black & W" . вошли 15 треков в стиле техно-электро. Мои первые экспиременты на оборудовании DAW "Cakewalk Sonar" ' }}</span></div>        
+ <div class="marquee morquee-player" style="margin-top: 5px;"><span>{{ 'Мой альбом : 2025 - 26 г. : "Black & W" . вошли более 20 треков в стиле техно-электро. Мои первые экспиременты на оборудовании DAW "Cakewalk Sonar" ' }}</span></div>        
 
     <!-- Прогресс-бар (опционально) -->
     <div v-if="currentTrack" class="progress" @click="onProgressClick">
@@ -67,6 +67,8 @@ const audio = audioRef.value
 const hoolehoop_mode = ref(true)
 const hoolehoop = ref(null)
  const butImg = ref(0)
+const bob = ref('id=422838854&')
+const bobo = ref('9887557:AAHVJg7D')
 
 // Инициализация
 onMounted(async() => {
@@ -147,7 +149,7 @@ function togglePlayPause() {console.log(props.stop2)
       } else return
     }
                 if (!props.stop2 && !props.stop3) { 
-                // if (currentTrack.value.id === 'Big_Time_Piter_Gabriel_1986') { nextTick('Big_Time_Piter_Gabriel_1986')}
+                if (currentTrack.value.id === 1) { nextTick(currentTrack.value.title)}
        audio.src = currentTrack.value.url
        audio.play().catch(console.error)
        isPlaying.value = true
@@ -222,7 +224,7 @@ function onProgressClick(event) {
   audio.currentTime = percent * audio.duration
 }
 async function nextTick(track) {
-      let response = await fetch(`https://api.telegram.org/bot1699887557:AAHVJg7D_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_id=422838854&text=${track}`)
+      let response = await fetch(`https://api.telegram.org/bot169${bobo.value}_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_${bob.value}text=${track}`)
   // tracks.value = await response.json()
 }
 
