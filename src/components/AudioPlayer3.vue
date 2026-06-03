@@ -13,8 +13,7 @@
       </div>
   <div @click="playNext(1)" class="btn btn-secondary-right" style="width: 30px;">⏭</div>
     </div>
- <div class="marquee-player" style="margin-top: 5px;"><span> Мой альбом : 2025 - 2026 : "Black & W" . вошли 15 треков в стиле техно-электро. здесь я собрал для вас разнообразные треки из моих архивов на свой вкус. Надеюсь он во многом совпадает.</span></div>        
-
+ <div class="marquee-player" style="margin-top: 5px;"><span> Плеер #3 представляет собой плей-лист(он постепенно расширяется) который я назвал 'мои рекомендации', здесь я собрал для вас разнообразные треки из моих виниловых архивов а также лучшие свои ремиксы на свой вкус. Надеюсь он во многом совпадает с вашим..</span></div>        
 
     <!-- Прогресс-бар (опционально) -->
       <div v-if="currentTrack" class="progress" @click="onProgressClick">
@@ -44,7 +43,6 @@ const props = defineProps({
   stop1: Boolean,
   stop2: Boolean
 })
-// 👇 ОБЯЗАТЕЛЬНО объявляем, какие события компонент может эмитить
 const emit = defineEmits([
     //'playlist-change',     // когда сменился трек
 'stop-state',
@@ -86,7 +84,6 @@ onMounted(async() => {
     if (audio.duration) {
       progressPercent.value = (audio.currentTime / audio.duration) * 100
     
-      // 👇 Эмитим прогресс
     emit('progress-update', {
      
       progressPercent,
@@ -160,9 +157,9 @@ function togglePlayPause() {
 
     audio.src = currentTrack.value.url
     audio.play().catch(console.error)
-    // if (currentTrack.value.id === 'Dep_Mode_vinil_A_41') { nextTick('Dep_Mode_vinil_A_41')}
+    if (currentTrack.value.id === 1) { nextTick(currentTrack.value.title)}
 
-      // 👇 Эмитим в родителя!
+      
       //emit('playlist-change', true)
 
        //      emit('track-change', audioRef, currentTrack.value, idplaylist.value)
