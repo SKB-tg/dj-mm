@@ -109,26 +109,26 @@ const albumTrack = { title: 'Мой трек', url: 'album.mp3' };
 const thematicTrack = { title: 'Известный', url: 'thematic.mp3' };
     if (canvas.value != null) {ctx.value = canvas.value.getContext('2d')}
 //****************************************** */
-Electron.value = [{"id": "Big_Time_Piter_Gabriel_1986", 'title': 'Big Time Piter Gabriel 1986', 'artist': 'Piter Gabriel', 'url': '/audio/Big_Time_Piter_Gabriel_1986.mp3', "year": "1986", 'duration': 590},
-    {"id": "06_BACK_TO_THE_UNIVERSE_ARCHIVES_1999", 'title': '06_BACK_TO_THE_UNIVERSE_ARCHIVES_1999', "year": "1999", 'artist': 'yy kkl', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/06_BACK_TO_THE_UNIVERSE_ARCHIVES_1999.mp3',  'duration': 6200},
-   {"id": "12_BACK_TO_THE_UNIVERSE_ARCHIVES_1999", 'title': '12_BACK_TO_THE_UNIVERSE_ARCHIVES_1999', "year": "1999", 'artist': '---', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/12_BACK_TO_THE_UNIVERSE_ARCHIVES_1999.mp3',  'duration': 5200},
-	{"id": "01_BACK_TO_THE_UNIVERSE_ARCHIVES_1999", 'title': '01_BACK_TO_THE_UNIVERSE_ARCHIVES_1999', "year": "1999", 'artist': '---', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/01_BACK_TO_THE_UNIVERSE_ARCHIVES_1999.mp3',  'duration': 4900},			  
-   {"id": "07_BACK_TO_THE_UNIVERSE_ARCHIVES_2024", 'title': '07_BACK_TO_THE_UNIVERSE_ARCHIVES_2024', "year": "2024", 'artist': '---', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/07_BACK_TO_THE_UNIVERSE_ARCHIVES_2024.mp3',  'duration': 5200},
-   {"id": "107FM_18_BACK_TO_THE_UNIVERSE_2000", 'title': '107FM_18_BACK_TO_THE_UNIVERSE_2000', "year": "2000", 'artist': 'yy kkl', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/18_BACK_TO_THE_UNIVERSE_ARCHIVES_2000.mp3',  'duration': 6200},
+Electron.value = [{"id": 1, 'title': 'Big Time Piter Gabriel 1986', 'artist': 'Piter Gabriel', 'url': '/audio/Big_Time_Piter_Gabriel_1986.mp3', "year": "1986", 'duration': 590},
+    {"id": 2, 'title': '06_BACK_TO_THE_UNIVERSE_ARCHIVES_1999', "year": "1999", 'artist': 'yy kkl', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/06_BACK_TO_THE_UNIVERSE_ARCHIVES_1999.mp3',  'duration': 6200},
+   {"id": 3, 'title': '12_BACK_TO_THE_UNIVERSE_ARCHIVES_1999', "year": "1999", 'artist': '---', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/12_BACK_TO_THE_UNIVERSE_ARCHIVES_1999.mp3',  'duration': 5200},
+	{"id": 4, 'title': '01_BACK_TO_THE_UNIVERSE_ARCHIVES_1999', "year": "1999", 'artist': '---', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/01_BACK_TO_THE_UNIVERSE_ARCHIVES_1999.mp3',  'duration': 4900},			  
+   {"id": 5, 'title': '07_BACK_TO_THE_UNIVERSE_ARCHIVES_2024', "year": "2024", 'artist': '---', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/07_BACK_TO_THE_UNIVERSE_ARCHIVES_2024.mp3',  'duration': 5200},
+   {"id": 6, 'title': '107FM_18_BACK_TO_THE_UNIVERSE_2000', "year": "2000", 'artist': 'yy kkl', 'url': 'https://storage-847.s3hoster.by/mbox1/pl2/18_BACK_TO_THE_UNIVERSE_ARCHIVES_2000.mp3',  'duration': 6200},
 ]
- rw.value = [{"id": "Dep_Mode_vinil_A_41", 'title': '4 Tracks: Depecne Mode', 'artist': 'Depecne Mode', 'url': '/audio/Dep_Mode_vinil_A_41.mp3', "year": "1986", 'duration': 1200},
-    {"id": "Zodiak_album_1981_A1_3tr", 'title': 'Zodiak album 1981 A1 3 track', 'artist': 'Zodiak', 'url': '/audio/Zodiak_album_1981_A1_3tr.mp3', "year": "1981", 'duration': 1200},
-    {"id": "Jean_Michel_Jarre_Oxygene_Madis_Cover", 'title': 'Jean Michel Jarre Oxygene Madis Cover track', 'artist': 'Jean Michel Jarre', 'url': '/audio/Jean_Michel_Jarre_Oxygene_Madis_Cover.mp3', "year": "1999", 'duration': 436},
-   { "id": "Bushwacka_Continuous_Mix", 'title': 'Bushwacka Tracks 2020', 'artist': 'DJ Bushwacka', 'url': 'https://storage-847.s3hoster.by/mbox1/pl3/Bushwacka_v11.mp3', "year": "2003", 'duration': 4682},
-   { 'title': 'Track 2003', 'artist': 'DJ Bushwacka', 'url': 'audio/Bushwackas.mp3', "year": "2003", 'duration': 1200}, 
- {"id": "morning_trash", "url": "https://storage-847.s3hoster.by/mbox1/morning_trash.mp3", "title": "Morning trash", "artist": "DJ MurrMyau", "album": "Black & W  creator DJ MurrMyau", "year": "2026", "duration": 926},
-    {"id": "Zodiak_album_1981_A2_4tr", 'title': 'Zodiak album 1981 A2 4 track', 'artist': 'Zodiak', 'url': 'audio/Zodiak_album_1981_A2_4tr.mp3', "year": "1981",'duration': 1180},
-{"id": "Remix_the_hall_of_the_mountain_king_E_G", "url": "audio/Remix_the_hall_of_the_mountain_king_E_G.mp3", "title": "Remix 'the Hall of the Mountain King' E. G.", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau", "year": "2025", "duration": 509},
-    {"id": "Adrenalin", "url": "audio/Adrenalin.mp3", "title": "Adrenalin", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2025", "duration": 175},
-    {"id": "Space_dance_2_remix", "url": "audio/Space_dance_2.mp3", "title": "Space dance 2 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 562},
-    {"id": "Space_dance_3remix", "url": "audio/Space_dance_3_1.mp3", "title": "Space dance 3 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
-    {"id": "Jump3_1", "url": "audio/Jump3_1.mp3", "title": "Jump3", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
-{"id": "L_D_mix", 'title': 'Remix "Beliver"', 'artist': 'DJ MurrMyau', "year": "2025", "album": "Black & W   creator DJ MurrMyau", 'url': 'audio/I_D_mix.mp3', 'duration': 300 }]
+ rw.value = [{"id": 1, 'title': '4 Tracks: Depecne Mode', 'artist': 'Depecne Mode', 'url': '/audio/Dep_Mode_vinil_A_41.mp3', "year": "1986", 'duration': 1200},
+    {"id": 2, 'title': 'Zodiak album 1981 A1 3 track', 'artist': 'Zodiak', 'url': '/audio/Zodiak_album_1981_A1_3tr.mp3', "year": "1981", 'duration': 1200},
+    {"id": 3, 'title': 'Jean Michel Jarre Oxygene Madis Cover track', 'artist': 'Jean Michel Jarre', 'url': '/audio/Jean_Michel_Jarre_Oxygene_Madis_Cover.mp3', "year": "1999", 'duration': 436},
+   { "id": 4, 'title': 'Bushwacka Tracks 2020', 'artist': 'DJ Bushwacka', 'url': 'https://storage-847.s3hoster.by/mbox1/pl3/Bushwacka_v11.mp3', "year": "2003", 'duration': 4682},
+   { "id": 5, 'title': 'Track 2003', 'artist': 'DJ Bushwacka', 'url': 'audio/Bushwackas.mp3', "year": "2003", 'duration': 1200}, 
+ {"id": 6, "url": "https://storage-847.s3hoster.by/mbox1/morning_trash.mp3", "title": "Morning trash", "artist": "DJ MurrMyau", "album": "Black & W  creator DJ MurrMyau", "year": "2026", "duration": 926},
+    {"id": 7, 'title': 'Zodiak album 1981 A2 4 track', 'artist': 'Zodiak', 'url': 'audio/Zodiak_album_1981_A2_4tr.mp3', "year": "1981",'duration': 1180},
+{"id": 8, "url": "audio/Remix_the_hall_of_the_mountain_king_E_G.mp3", "title": "Remix 'the Hall of the Mountain King' E. G.", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau", "year": "2025", "duration": 509},
+    {"id": 9, "url": "audio/Adrenalin.mp3", "title": "Adrenalin", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2025", "duration": 175},
+    {"id": 10, "url": "audio/Space_dance_2.mp3", "title": "Space dance 2 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 562},
+    {"id": 11, "url": "audio/Space_dance_3_1.mp3", "title": "Space dance 3 remix", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
+    {"id": 12, "url": "audio/Jump3_1.mp3", "title": "Jump3", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
+{"id": 13, 'title': 'Remix "Beliver"', 'artist': 'DJ MurrMyau', "year": "2025", "album": "Black & W   creator DJ MurrMyau", 'url': 'audio/I_D_mix.mp3', 'duration': 300 }]
 // Общее состояние для всех плееров
 const activeTrack1 = ref(null)
 const globalProgress = ref(0)
