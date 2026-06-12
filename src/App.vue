@@ -130,7 +130,7 @@ Electron.value = [{"id": 1, 'title': 'Big Time Piter Gabriel 1986', 'artist': 'P
     {"id": 12, "url": "audio/Jump3_1.mp3", "title": "Jump3", "artist": "DJ MurrMyau", "album": "Black & W   creator DJ MurrMyau",  "year": "2026", "duration": 391},
 {"id": 13, 'title': 'Remix "Beliver"', 'artist': 'DJ MurrMyau', "year": "2025", "album": "Black & W   creator DJ MurrMyau", 'url': 'audio/I_D_mix.mp3', 'duration': 300 },
 {"id": 14, 'title': 'Remix "Beggin"', 'artist': 'DJ MurrMyau', "year": "2026", "album": "Black & W   creator DJ MurrMyau", 'url': 'au/Begin_mix_l_fin1.mp3', 'duration': 620 }]
-]
+
 	// Общее состояние для всех плееров
 const activeTrack1 = ref(null)
 const globalProgress = ref(0)
