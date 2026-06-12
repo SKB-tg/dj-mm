@@ -59,9 +59,7 @@
         <!-- <div class="controls"></div> -->
         <div ref="visualizer" class="visualizer">
             <!-- Canvas, video, particles -->
-        <canvas ref="canvas" id="visualizerCanvas">
-
-        </canvas>
+<canvas ref="canvas" id="visualizerCanvas"></canvas>
             <div ref="particles" class="particles" id="particles"></div>
 
         </div>
