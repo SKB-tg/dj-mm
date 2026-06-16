@@ -309,6 +309,7 @@ h1 {
         /* Мобильная адаптация (9:16 вертикально) */
         @media (orientation: portrait) {
             body {
+ 				height: 88vh;
                 justify-content: space-between;
             }
             .container {
@@ -363,9 +364,6 @@ h1 {
             .marquee, .progress-container {
                 width: 95%;
             }
-			body {
- 				height: 88vh;
-			}
         }
 
         @media (max-width: 600px) {
