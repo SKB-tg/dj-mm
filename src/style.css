@@ -363,6 +363,9 @@ h1 {
             .marquee, .progress-container {
                 width: 95%;
             }
+			body {
+ 				height: 88vh;
+			}
         }
 
         @media (max-width: 600px) {
