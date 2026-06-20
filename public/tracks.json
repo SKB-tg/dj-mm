@@ -174,4 +174,23 @@
   "duration": 460,
     "happy": ""
 }
+  {
+  "id": 19,
+  "url": "/audio/Abrakadabra33311.mp3",
+  "title": "Style v2",
+  "artist": "DJ MurrMyau",
+  "album": "Black & W   creator DJ MurrMyau",
+  "year": "2026",
+  "duration": 540,
+  "happy": ""
+  },      {
+  "id": 20,
+  "url": "https://storage-847.s3hoster.by/mbox1/pl3/Style_41.mp3",
+  "title": "Style v4",
+  "artist": "DJ MurrMyau",
+  "album": "'Style' creator DJ MurrMyau",
+  "year": "2026",
+  "duration": 305,
+  "happy": ""
+  },    
 ]
