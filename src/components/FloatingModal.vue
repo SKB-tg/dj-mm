@@ -27,8 +27,7 @@
 Очень просто - для возврата на стартовый экран с тремя плеерами.
 Ещё одна проблема была отмечена при загрузке главной страницы на мобильном телефоне - третий плеер не полностью отображается,.
 Попробуйте изменить в настройках своего телефона "масштаб изображения экрана" (зависит от версии андроида).
-В добрый путь товарищ .
-            ============                 
+В добрый путь товарищ .       ============                 
 Welcome to the music app!
 Here you'll find the best tracks from around the world.
 Enjoy the sound, visuals, and smooth interface.
@@ -142,6 +141,7 @@ onUnmounted(() => {
   background: rgba(255, 255, 255, 0.15);
   border: none;
   color: rgb(141, 136, 136);
+  box-shadow: 0 3px 3px 5px #ffae00b3;
   font-size: 18px;
   /* width: 36px; */
   height: 36px;
