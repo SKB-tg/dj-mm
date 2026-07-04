@@ -176,7 +176,7 @@
 },
   {
   "id": 19,
-  "url": "/audio/Abrakadabra33311.mp3",
+  "url": "https://storage-847.s3hoster.by/mbox1/pl3/Abrakadabra33311.mp3",
   "title": "Style v2",
   "artist": "DJ MurrMyau",
   "album": "Black & W   creator DJ MurrMyau",
@@ -193,5 +193,25 @@
   "year": "2026",
   "duration": 305,
   "happy": ""
-  }    
+}, 
+    {
+  "id": 21,
+  "url": "https://storage-847.s3hoster.by/mbox1/pl3/Abrakadabra333111.mp3",
+  "title": "Style v3",
+  "artist": "DJ MurrMyau",
+  "album": "'Style' creator DJ MurrMyau",
+  "year": "2026",
+  "duration": 730,
+  "happy": ""
+},
+    {
+  "id": 22,
+  "url": "https://storage-847.s3hoster.by/mbox1/pl3/gowt.mp3",
+  "title": "На волоске от...",
+  "artist": "DJ MurrMyau",
+  "album": "'Style' creator DJ MurrMyau",
+  "year": "2026",
+  "duration": 429,
+  "happy": ""
+    }    
 ]
