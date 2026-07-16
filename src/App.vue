@@ -73,7 +73,7 @@ import AudioPlayer2 from './components/AudioPlayer2.vue'
 import AudioPlayer3 from './components/AudioPlayer3.vue'
 import FloatingModal from './components/FloatingModal.vue'
 
-const showModal = ref(true)
+const showModal = ref(false)
 
 // Эти данные могут приходить из tracks.json или API
 const Spaceelectro = ref([])
