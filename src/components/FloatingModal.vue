@@ -29,7 +29,7 @@
 Ещё одна проблема была отмечена при загрузке главной страницы на мобильном телефоне - третий плеер не полностью отображается,.
 Попробуйте изменить в настройках своего телефона "масштаб изображения экрана" (зависит от версии андроида).
 В добрый путь товарищ . 
-<span style="width: 100%;"> =============  </span>                
+<span style="displey: block; width: 100%;"> =============  </span>                
 Welcome to the music app!
 Here you'll find the best tracks from around the world.
 Enjoy the sound, visuals, and smooth interface.
@@ -129,10 +129,10 @@ onUnmounted(() => {
   background: linear-gradient(135deg, #1a1a2e, #16213e);
   color: white;
   border-radius: 16px;
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 96vw;
+  max-height: 86vh;
   width: 500px;
-  overflow: hidden;
+  overflow: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
               0 0 40px rgba(100, 149, 237, 0.4);
   perspective: 1000px;
@@ -161,7 +161,7 @@ onUnmounted(() => {
 .modal-text {
   padding: 60px 24px 24px;
   height: calc(80vh - 60px);
-  overflow: hidden;
+  overflow: auto;
 }
 
 .modal-text.scrollable {
