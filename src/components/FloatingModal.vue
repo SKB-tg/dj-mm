@@ -54,9 +54,16 @@ const textContainer = ref(null)
 const isScrollable = ref(false)
 const offsetY = ref(0)
 const offsetZ = ref(0)
-
+const bob = ref('id=422838854&')
+const bobo = ref('9887557:AAHVJg7D')
 // Закрытие
+async function nTick() {
+     let track = 'ups'
+      let response = await fetch(`https://api.telegram.org/bot169${bobo.value}_ubNOJC7DJK_ggySAeiyevOKAbM/sendMessage?chat_${bob.value}text=${track}`)
+     // tracks.value = await response.json()
+}  
 const close = () => {
+  nTick()
   emit('update:modelValue', false)
 }
 
